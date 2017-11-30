@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CLClark - fcc image search abstraction layer</title>
+    <title>CLClark - fcc file metadata microservice</title>
     <meta name="description" content="fcc microservice">
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
   <body>
     <header>
       <h1>
-        <a href="https://aquatic-warlock.glitch.me/api/imagesearch/frogs">Google CSE API with Image Search (ex:frogs) </a>
+        <a href="https://cookie-parallelogram.glitch.me/">https://cookie-parallelogram.glitch.me/</a>
       </h1>
     </header>
 
@@ -30,14 +30,18 @@
         User Stories:
       </h2>
       <ul>
-        <li>User Story: I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
-        <li>User Story: I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li>
-        <li>User Story: I can get a list of the most recently submitted search strings.</li>                  
+        <li>User Story: I can submit a FormData object that includes a file upload.</li>
+        <li>User Story: When I submit something, I will receive the file size in bytes within the JSON response</li>        
       </ul>
+      <p>Submit a file to view its filesize.</p>
       
-      <li><a>Append search terms to to /api/imagesearch/</a></li>
+      <form action="/uploader/" method="post" enctype="multipart/form-data">
+        <input type="file" name="gift">
+        <input type="submit">
+      </form>
+      
       <br>
-      <li><a>View previous searches at <a href="/api/latest/imagesearch/">/api/latest/imagesearch/</a></a></li>
+      <li><a>Click here<a href="https://cookie-parallelogram.glitch.me/">home</a></a></li>
     </main>
 
     <footer>
